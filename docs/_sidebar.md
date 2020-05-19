@@ -2,6 +2,7 @@
 	- [ArrayList](/collections/ArrayList.md)
 	- [HashMap](/collections/HashMap.md)
 - JVM
+	- [运行时数据区](/jvm/runtime-data-area.md)
 	- [垃圾回收](/jvm/gc.md)
 	- [垃圾收集器](/jvm/garbage-collectors.md)
 	
