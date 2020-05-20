@@ -6,6 +6,8 @@
 	- [对象的创建、布局与访问](/jvm/object-layout.md)
 	- [垃圾回收](/jvm/gc.md)
 	- [垃圾收集器](/jvm/garbage-collectors.md)
+	- [内存分配与回收策略](/jvm/Memory-allocation-strategy.md)
+	
 	
 - 多线程
 - Mysql
