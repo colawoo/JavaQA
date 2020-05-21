@@ -9,7 +9,7 @@
 所谓大对象是指，需要大量连续内存空间的Java对象，最典型的大对象就是那种很长的字符串以及数组。
 大对象对虚拟机的内存分配是一个坏消息，而更坏的消息是，存在很多短命的大对象。
 
-`-XX:PretenureSizeThreshold` 令大于这个设置值的对象直接在老年代分配。避免在eden和两个survivor发生大量的内存赋复制。只对Serial和ParNew有效。
+`-XX:PretenureSizeThreshold` 令大于这个设置值的对象直接在老年代分配。避免在eden和两个survivor发生大量的内存赋复制。只对Serial和ParNew有效。该值默认为0，表示不论多大对象，都先在Eden区分配。
 
 
 ### 3 长期存活的对象将进入老年代
@@ -27,6 +27,7 @@ survivor中同龄的所有对象大小总和大于survivor空间的一半，年�
 
 ### 5 空间分配担保
 
+jdk1.6 u24前
 在发生minor gc前，虚拟机会先检查老年代最大可用的连续空间是否大于新生代所有对象总空间
 - 条件成立，那么minor gc可以确保安全。
 - 不成立，则虚拟机会查看HandlePromotionFailure设置值是否允许担保失败。
@@ -34,7 +35,8 @@ survivor中同龄的所有对象大小总和大于survivor空间的一半，年�
 		- 大于，将尝试着进行一次minor gc，尽管这次minor gc是有风险的
 		- 小于或者HandlePromotionFailure设置不允许冒险，此时改为进行一次Full GC。
 
-
+jdk1.6 u24后
+只要老年代连续空间大于新生代对象总大小或历次晋升的平均大小就会进行minor gc，否则进行Full GC。
 
 
 
