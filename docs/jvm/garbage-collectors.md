@@ -42,7 +42,7 @@ ParNew收集器是Serial收集器的多线程版本，除了使用多线程进�
 - 缺点：
 
 - 适合场景：server端首选的新生代收集器，因为除了Serial收集器，只有ParNew能与CMS收集器配合
-- Serial/Serial Old收集器的运行过程
+- ParNew/Serial Old收集器的运行过程
 
 <img src="_img/jvm/garbage-collectors/3.png" />
 
@@ -182,8 +182,12 @@ CMS收集器的运作步骤中并发和需要停顿的时间。
 ### 3 垃圾收集器参数总结
 
 
-
-
+- `-XX:UseSerialGC`：`Serial` + `Serial Old`，client模式默认
+- `-XX:UseParNewGC`：`ParNew` + `Serial Old`
+- `-XX:UseConcMarkSweepGC`：`ParNew` + `CMS` + `Serial Old`
+- `-XX:UseParallelGC`：`Parallel Scavenge` + `Serial Old（PS MarkSweep）`
+- `-XX:UseParallelOldGC`：`Parallel Scavenge` + `Parallel Old`
+- `-XX:UseG1GC`：`G1`
 
 
 
