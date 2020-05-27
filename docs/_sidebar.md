@@ -1,5 +1,6 @@
 - 集合
 	- [ArrayList](/collections/ArrayList.md)
+	- [LinkedList](/collections/LinkedList.md)
 	- [HashMap](/collections/HashMap.md)
 
 - 多线程
