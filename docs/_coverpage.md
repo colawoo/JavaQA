@@ -1,8 +1,8 @@
 
-# Java Q&A
+# XNote
 
 
-> Java相关技术问答。
+> 个人笔记，方便日后复习及查阅。
 
-[GitHub](https://github.com/colawoo/JavaQA/)
+[GitHub](https://github.com/colawoo/xnote/)
 [Get Started](#Headline)
