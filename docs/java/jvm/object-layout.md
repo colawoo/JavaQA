@@ -1,7 +1,7 @@
 
 ### 1 对象的创建
 
-<img src="_img/jvm/object-layout/hotspot对象创建.jpg" width="75%"/>
+<img src="images/java/jvm/object-layout/hotspot对象创建.jpg" width="75%"/>
 
 a) 当我们`new ArrayList()`的时候，首先虚拟机将去常量池中找，是否有该符号引用，然后判断该符号引用对应的类是否已加载。没有加载的执行加载流程。
 
@@ -26,7 +26,7 @@ e) 执行`<init>`方法，把对象按照程序员的意愿进行初始化。这
 ### 2 对象的内存布局
 在HotSpot虚拟机中，对象在内存中存储的布局可以分为3块区域：`对象头（Header）`、`实例数据（Instance Data）`和`对齐填充（Padding）`。如下图
 
-<img src="_img/jvm/object-layout/hotspot对象内存布局1.jpg" width="75%"/>
+<img src="images/java/jvm/object-layout/hotspot对象内存布局1.jpg" width="75%"/>
 
 #### 2.1 对象头（Header）
 
@@ -70,12 +70,12 @@ Java程序需要通过栈上的对象引用来操作堆中的对象。Java虚拟
 	- 优点：引用中存储的是稳定的句柄地址，在对象被移动时，只会改变句柄中的对象地址，而引用中存储的值不需要修改。
 	
 
-<img src="_img/jvm/object-layout/1.png" width="80%"/>
+<img src="images/java/jvm/object-layout/1.png" width="80%"/>
 
 - `直接指针`。堆中的对象布局就必须考虑如何放置访问类型数据的相关信息，而引用中存储的直接就是对象地址。
 	- 优点：速度更快。节省了一次指针定位的时间开销。
 
-<img src="_img/jvm/object-layout/2.png" width="80%"/>
+<img src="images/java/jvm/object-layout/2.png" width="80%"/>
 
 
 

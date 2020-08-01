@@ -2,7 +2,7 @@
 
 
 
-<img src="_img/jvm/garbage-collectors/1.png" width = "50%" />
+<img src="images/java/jvm/gc/1.png" width = "50%" />
 
 图中展示了7种作用于不同分代的收集器，如果两个收集器之间存在连线，就说明它们可以搭配使用。
 
@@ -25,7 +25,7 @@ Serial收集器是最基本、发展历史最悠久的收集器。
 - 适合场景：对于限定单个cpu的环境来说，Serial收集器由于没有线程交互的开销，专心做垃圾收集自然可以获得最高的单线程收集效率。在用户的桌面应用场景中，分配给虚拟机管理的内存一般来说不会很大，收集几十兆甚至一两百兆的新生代（仅仅是新生代使用的内存，桌面应用基本上不会再大了），停顿时间完全可以控制在几十毫秒最多一百多毫秒内，只要不是频繁发生，这点停顿是可以接受的。所以，Serial收集器对于运行在client模式下的虚拟机来说一个很好的选择。
 - Serial/Serial Old收集器的运行过程
 
-<img src="_img/jvm/garbage-collectors/2.png" />
+<img src="images/java/jvm/gc/2.png" />
 
 #### 1.2 ParNew收集器
 
@@ -44,7 +44,7 @@ ParNew收集器是Serial收集器的多线程版本，除了使用多线程进�
 - 适合场景：server端首选的新生代收集器，因为除了Serial收集器，只有ParNew能与CMS收集器配合
 - ParNew/Serial Old收集器的运行过程
 
-<img src="_img/jvm/garbage-collectors/3.png" />
+<img src="images/java/jvm/gc/3.png" />
 
 
 
@@ -94,7 +94,7 @@ Serial Old收集器是Serial的老年代版本。
 - 适合场景：主要意义是在于给client模式下的虚拟机使用。如果在server模式下，那么它主要还有两大用途，一种是jdk1.5以及之前的版本中与Parallel Scavenge收集器搭配使用。另一种用途就是作为CMS收集器的后备预案，在并发收集发生Concurrent Mode Failure时使用。用户的桌面应用场景。
 - Serial/Serial Old收集器的运行过程
 
-<img src="_img/jvm/garbage-collectors/4.png" />
+<img src="images/java/jvm/gc/4.png" />
 
 
 
@@ -115,7 +115,7 @@ Parallel Old是Parallel Scavenge收集器的老年代版本。
 - 适合场景：注重吞吐量以及cpu资源敏感的场合
 - Parallel Scavenge/Parallel Old收集器的工作过程
 
-<img src="_img/jvm/garbage-collectors/5.png" />
+<img src="images/java/jvm/gc/5.png" />
 
 
 
@@ -154,7 +154,7 @@ CMS(Concurrent Mark Sweep)收集器是一种以获取最短回收停顿时间为
 
 CMS收集器的运作步骤中并发和需要停顿的时间。
 
-<img src="_img/jvm/garbage-collectors/6.png" />
+<img src="images/java/jvm/gc/6.png" />
 
 
 

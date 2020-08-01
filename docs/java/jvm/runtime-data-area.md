@@ -1,9 +1,9 @@
 
 ### I JDK7 JVM运行时数据区
-<img src="_img/jvm/runtime-data-area/JVM运行时数据区.jpg" width="60%"/>
+<img src="images/java/jvm/runtime-data-area/JVM运行时数据区.jpg" width="60%"/>
 
 ### II JDK8 JVM运行时数据区
-<img src="_img/jvm/runtime-data-area/JVM运行时数据区jdk8.jpg" width="60%"/>
+<img src="images/java/jvm/runtime-data-area/JVM运行时数据区jdk8.jpg" width="60%"/>
 
 ### 1 程序计数器
 
@@ -77,7 +77,7 @@ NIO可以使用`Native`函数直接分配堆外内存。通过存储在堆中的
 
 ### 常用参数
 
-<img src="_img/jvm/runtime-data-area/1.jpg" />
+<img src="images/java/jvm/runtime-data-area/1.jpg" />
 
 通过上图可以直观的查看各个区域的参数设置。
 

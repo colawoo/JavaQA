@@ -1,5 +1,5 @@
 
-# XNote
+# Xuxq's Notes
 
 
 > 个人笔记，方便日后复习及查阅。
