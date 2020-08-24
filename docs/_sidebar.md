@@ -1,5 +1,6 @@
 - **Java**
 	- [集合](java/collection/_sidebar.md)
+	- [函数式编程](java/fp/fp.md)
 	- [多线程](java/concurrent/_sidebar.md)
 	- [JVM](java/jvm/_sidebar.md)
 
