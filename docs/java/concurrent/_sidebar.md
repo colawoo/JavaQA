@@ -6,4 +6,4 @@
 	- [Lock锁与Condition](ing.md)
 	- [原子类](ing.md)
 	- [并发容器](ing.md)
-	- [线程池](ing.md)
+	- [线程池](java/concurrent/java-thread-pool.md)

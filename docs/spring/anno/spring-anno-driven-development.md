@@ -267,6 +267,8 @@ public class MainConfig {
 
 ### @Conditional
 
+按照一定条件判断，满足条件则向容器中注册组件
+
 
 
 
